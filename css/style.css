@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #595758;
+    --second-bg-color: #ADBDFF;
+    --accent-color: #B0FE76;
+    --main-color: #5b7c63;
+    --text-color: #FFFFFF;
+}
+
+html {
+    font-size: 65%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 5%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 450;
+    margin-left: 3.5rem;
+    transition: 0.25s;
+}
+
+.navbar a:hover, 
+.navbar a:active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 3.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 5% 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-img img {
+    position: relative;
+    width: 550px;
+    border-radius: 50%;
+    margin-right: 60px;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.home-content {
+    max-width: 60rem;
+}
+
+.home-content h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+}
+
+.home-content .text-animate {
+    position: relative;
+
+}
+
+.home-content .text-animate h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--accent-color);
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 4rem;
+}
+
+.button-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+}
+
+.button-box .button {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    background: var(--second-bg-color);
+    border: 0.2rem solid var(--second-bg-color);
+    border-radius: 0.8rem;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.button-box .button:hover{
+    color: var(--second-bg-color);
+}
+
+.button-box .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.button-box .button:hover::before {
+    width: 100%;
+}
+
+.home-socials {
+    position: absolute;
+    width: 100px;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-socials a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: var(--accent-color);
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem solid var(--accent-color);
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.home-socials a:hover{
+    color: var(--bg-color);
+}
+
+.home-socials a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--accent-color);
+    z-index: -1;
+    transition: 0.5s;;
+}
+
+.home-socials a:hover::before {
+    width: 100%;
+}
