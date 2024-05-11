@@ -132,7 +132,7 @@ section {
     background: var(--second-bg-color);
     border: 0.2rem solid var(--second-bg-color);
     border-radius: 0.8rem;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 600;
     letter-spacing: 0.1rem;
     color: var(--bg-color);
@@ -205,4 +205,165 @@ section {
 
 .home-socials a:hover::before {
     width: 100%;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--main-color)
+
+}
+
+.heading {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+span {
+    color: var(--second-bg-color);
+}
+
+.about-me-img {
+    position: relative;
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me-img img {
+    width: 90%;
+    border-radius: 50%;
+    border: 0.2rem solid var(--second-bg-color);
+}
+
+.about-me-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: 0.2rem solid var(--second-bg-color);
+    border-left: 0.2rem solid var(--main-color);
+    border-bottom: 0.2rem solid var(--second-bg-color);
+    border-right: 0.2rem solid var(--main-color);
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content h3 {
+    font-size: 2.5rem;
+}
+
+.about-content p {
+    font-size: 1.5rem;
+    margin: 2rem 0 2rem 0;
+}
+
+.button-box.buttons {
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.edu-exp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+.edu-exp .edu-exp-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.edu-exp .edu-exp-column {
+    flex: 1 1 40rem;
+}
+
+.edu-exp-column .title {
+    font-size: 2.5rem;
+    color: var(--second-bg-color);
+    margin: 0 0 1.5rem 2rem;
+}
+
+.edu-exp-column .edu-exp-box {
+    border-left: .2rem solid var(--accent-color);
+}
+
+.edu-exp-box .edu-exp-content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.edu-exp-box .edu-exp-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--accent-color);
+    border-radius: 50%;
+}
+
+.edu-exp-content .content {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: 0.2rem solid var(--accent-color);
+    border-radius: 0.6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.edu-exp-content .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.edu-exp-content .content:hover::before {
+    width: 100%;
+}
+
+.edu-exp-content .content .year {
+    font-size: 1.5rem;
+    color: var(--second-bg-color);
+    padding-bottom: .5rem;
+}
+
+.edu-exp-content .content .year i {
+    padding-right: 0.5rem
+}
+
+.edu-exp-content .content h3 {
+    font-size: 1.75rem;
+}
+
+.edu-exp-content .content p {
+    font-size: 1.25rem;
+    padding-top: 0.5rem;
 }
