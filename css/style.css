@@ -12,11 +12,17 @@
 }
 
 :root {
-    --bg-color: #595758;
-    --second-bg-color: #ADBDFF;
-    --accent-color: #B0FE76;
-    --main-color: #5b7c63;
-    --text-color: #FFFFFF;
+    --bg-color: #E8E8E8;
+    --second-bg-color: #D51616;
+    --accent-color: #62466B;
+    --main-color: #C97979;
+    --text-color: #000000;
+
+    --bg-color1: #595758;
+    --second-bg-color1: #ADBDFF;
+    --accent-color1: #B0FE76;
+    --main-color1: #5b7c63;
+    --text-color1: #FFFFFF;
 }
 
 html {
@@ -97,7 +103,8 @@ section {
     display: flex;
     align-items: center;
     padding: 0 5%;
-    gap: 8rem;
+    
+    justify-content: space-between;
 }
 
 .home-content {
@@ -123,30 +130,7 @@ section {
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: 1.2px var(--accent-color);
-    /*
-    background-image: linear-gradient(var(--accent-color), var(--accent-color));
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-position: -45rem 0;
-    animation: homeBgText 6s linear infinite;
-    animation-delay: 2s;
-    */
 }
-
-/*
-.home-content .text-animate h3::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    border-right: 2px solid var(--accent-color);
-    z-index: -1;
-    animation: homeCursorText 6s linear infinite;
-    animation-delay: 2s;
-}
-*/
 
 .home-content p {
     position: relative;
@@ -172,6 +156,7 @@ section {
     height: 100%;
     background: var(--second-bg-color);
     border: 0.2rem solid var(--second-bg-color);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
     border-radius: 0.8rem;
     font-size: 1.75rem;
     font-weight: 600;
@@ -259,6 +244,7 @@ section {
 }
 
 .heading {
+    position: relative;
     font-size: 5rem;
     margin-bottom: 3rem;
     text-align: center;
@@ -305,10 +291,13 @@ span {
 }
 
 .about-content h3 {
+    position: relative;
+    display: inline-block;
     font-size: 2.5rem;
 }
 
 .about-content p {
+    position: relative;
     font-size: 1.5rem;
     margin: 2rem 0 2rem 0;
 }
@@ -316,6 +305,8 @@ span {
 .btn-box.btns {
     display: inline-block;
     width: 15rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .4);
+    border-radius: 0.8rem;
 }
 
 .edu-exp {
@@ -338,12 +329,15 @@ span {
 }
 
 .edu-exp-column .title {
+    position: relative;
+    display: inline-block;
     font-size: 2.5rem;
     color: var(--second-bg-color);
     margin: 0 0 1.5rem 2rem;
 }
 
 .edu-exp-column .edu-exp-box {
+    position: relative;
     border-left: .2rem solid var(--accent-color);
 }
 
@@ -417,6 +411,12 @@ span {
     background: var(--main-color);
 }
 
+.skills h2 {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .skills .skills-row {
     display: flex;
     flex-wrap: wrap;
@@ -428,9 +428,16 @@ span {
 }
 
 .skills-column .title {
+    position: relative;
+    display: inline-block;
     font-size: 2.5rem;
     margin: 0 0 1.5rem;
 }
+
+.skills-column .skills-box {
+    position: relative;
+}
+
 
 .skills-box .skills-content::before {
     content: '';
@@ -439,7 +446,8 @@ span {
     height: 100%;
     top: 0;
     left: 0;
-    background: var(--bg-color);
+    border-radius: 0.6rem;
+    background: var(--accent-color);
     z-index: -1;
     transition: 0.5s;
 }
@@ -550,6 +558,12 @@ span {
     padding-bottom: 10rem;
 }
 
+.contact h2 {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .contact form {
     max-width: 70rem;
     margin: 0 auto;
@@ -648,12 +662,19 @@ span {
     right: 0;
     width: 100%;
     height: 100%;
-    background: yellowgreen;
+    background: var(--bg-color);
     z-index: 98;
 }
 
 .animate.home-img {
-    width: 50%;
+    width: 100%;
+}
+
+.animate.btn-box {
+    width: 36.5rem;
+    height: 8rem;
+    top: -1rem;
+    right: -1rem;
 }
 
 .logo .animate,
@@ -663,6 +684,7 @@ span {
     animation: showRight 1s ease forwards;
     animation-delay: calc(0.3s * var(--i));
 }
+
 
 /* BREAKPOINTS */
 @media (max-width: 1200px) {
@@ -677,6 +699,7 @@ span {
     }
 
     section {
+        min-height: 100vh;
         padding: 10rem 2.5% 2rem;
     }
 
@@ -690,6 +713,10 @@ span {
 }
 
 @media (max-width: 768px) {
+
+    section {
+        min-height: 100vh;
+    }
 
     .home-img img {
         margin-top: 100px;
@@ -785,6 +812,11 @@ span {
 }
 
 @media (max-width: 520px) {
+
+    section {
+        min-height: 100vh;
+    }
+
     html {
         font-size: 50%;
     }
@@ -844,5 +876,9 @@ span {
 @keyframes showRight {
     100% {
         width: 0%;
+    }
+
+    0% {
+        width: 100%;
     }
 }

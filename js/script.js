@@ -7,7 +7,6 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 }
 
-
 // scroll sections
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -20,17 +19,13 @@ window.onscroll = () => {
         let id = sec.getAttribute('id');
 
         if (top >= offset && top < offset + height) {
+            // active navbar links
             navLinks.forEach(links => {
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             })
-
             //active sections for animation on scroll
             sec.classList.add('show-animate');
-        }
-        // if want to use animation that repeats on scroll use this
-        else {
-            sec.classList.remove('show-animate');
         }
     });
 
