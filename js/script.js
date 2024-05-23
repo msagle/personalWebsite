@@ -38,28 +38,3 @@ window.onscroll = () => {
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 }
-
-class Header extends HTMLElement {
-    connectedCallback() {
-      this.innerHTML = `
-        <header class="header">
-            <a href="#" class="logo">Mikayla.<span class="animate" style="--i:1;"></span></a>
-        
-            <div class="bx bx-menu" id="menu-icon"> <span class="animate" style="--i:2;"></span></div>
-        
-            <nav class="navbar">
-                <a href="/Users/mikaylasagle/Documents/VSCode/personalWebsite/index.html" class="active">Home</a>
-                <a href="/Users/mikaylasagle/Documents/VSCode/personalWebsite/html/about.html">About</a>
-                <a href="/Users/mikaylasagle/Documents/VSCode/personalWebsite/html/edu-exp.html">Education</a>
-                <a href="/Users/mikaylasagle/Documents/VSCode/personalWebsite/html/skills.html">Skills</a>
-                <a href="/Users/mikaylasagle/Documents/VSCode/personalWebsite/html/contact.html">Contact</a>
-        
-                <span class="active-nav"></span>
-                <span class="animate" style="--i:2;"></span>
-            </nav>
-        </header>
-      `;
-    }
-  }
-
-  customElements.define('main-header', Header);
