@@ -498,9 +498,9 @@ span {
     width: 80%;
 }
 
-/* html/css */
+/* c++ */
 .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-    width: 70%;
+    width: 75%;
 }
 
 /* typescript */
@@ -508,9 +508,9 @@ span {
     width: 70%;
 }
 
-/* c++ */
+/* html/css */
 .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 60%;
+    width: 70%;
 }
 
 /* problem solving */
