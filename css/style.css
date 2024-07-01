@@ -550,6 +550,7 @@ span {
 .contact {
     min-height: 100vh;
     padding-bottom: 10rem;
+    background: var(--main-color);
 }
 
 .contact h2 {
